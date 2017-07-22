@@ -2,6 +2,7 @@
 const express = require('express');
 const router = express.Router();
 const knex = require('../knex');
+const cookieSession = require('cookie-session');
 
 router.get('/:id?', (req, res, next) => {
   let id = req.params.id;
@@ -25,5 +26,18 @@ router.get('/:id?', (req, res, next) => {
     });
   }
 });
+
+router.post('/register' , (req, res, next) => {
+  knex('users')
+  .insert(req.body, '*')
+  .then(result => {
+    return res.send(result[0]);
+  })
+  .catch(err => {
+    next(err);
+  });
+});
+
+
 
 module.exports = router;
