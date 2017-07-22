@@ -27,4 +27,31 @@ router.post('/', (req,res,next) => {
     });
 });
 
+router.patch('/:id', (req,res,next) => {
+  let id = req.params.id;
+  knex('properties')
+  .where('id',id)
+  .update(req.body, '*')
+  .then(result => {
+    return res.send(result[0]);
+  })
+  .catch(err => {
+    next(err);
+  });
+});
+
+router.delete('/:id', (req,res,next) => {
+  let id = req.params.id;
+  knex('properties')
+  .where('id',id)
+  .returning('*')
+  .del()
+  .then(result => {
+    return res.send(result[0]);
+  })
+  .catch(err => {
+    next(err);
+  });
+});
+
 module.exports = router;
