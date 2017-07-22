@@ -38,6 +38,15 @@ router.post('/register' , (req, res, next) => {
   });
 });
 
-
+router.post('/register' , (req, res, next) => {
+  knex('users')
+  .insert(req.body, '*')
+  .then(result => {
+    return res.send(result[0]);
+  })
+  .catch(err => {
+    next(err);
+  });
+});
 
 module.exports = router;
