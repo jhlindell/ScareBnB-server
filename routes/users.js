@@ -38,15 +38,18 @@ router.post('/register' , (req, res, next) => {
   });
 });
 
-router.post('/register' , (req, res, next) => {
+router.patch('/register/:id', (req, res, next) => {
+  let id = req.params.id;
+  console.log("input",req.body);
   knex('users')
-  .insert(req.body, '*')
+  .where('id',id)
+  .update(req.body, '*')
   .then(result => {
     return res.send(result[0]);
   })
   .catch(err => {
     next(err);
   });
-});
+})
 
 module.exports = router;
