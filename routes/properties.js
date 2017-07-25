@@ -19,6 +19,7 @@ router.post('/', (req,res,next) => {
   var property = req.body;
   knex('properties')
     .insert(property)
+    .returning('*')
     .then(result=>{
       res.send(result);
     })
