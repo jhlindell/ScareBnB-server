@@ -14,7 +14,8 @@ exports.seed = function(knex, Promise) {
           description: 'This place is haunted as fuck. The ghosts here will scare the falafel out of you. Book here if you got the stones.',
           amenities: 'running water and power',
           nightly_price: 29.99,
-          house_rules: 'Keep the noise down.'
+          house_rules: 'Keep the noise down.',
+          bookedOnHalloween: false
         },
         {
           owner_id: 2,
@@ -27,7 +28,8 @@ exports.seed = function(knex, Promise) {
           description: 'This treehouse is next level haunted. This treehouse is probably the headquaters for Ghosts and demons to practice their latest scares.',
           amenities: 'A pretty comfy rug',
           nightly_price: 3.50,
-          house_rules: 'Dont use a ouija board.'
+          house_rules: 'Dont use a ouija board.',
+          bookedOnHalloween: false
         },
         {
           owner_id: 3,
@@ -40,7 +42,8 @@ exports.seed = function(knex, Promise) {
           description: 'This place overlooks boulder. The ghosts here pretend to be friendly but they will haunt you when you try to sleep. A perfect place to test if you really can sleep through anything.',
           amenities: 'Wonderful Overlook, hottub, beanbags',
           nightly_price: 45.99,
-          house_rules: 'Bed time is 9-o-clock.'
+          house_rules: 'Bed time is 9-o-clock.',
+          bookedOnHalloween: false
         }
       ]);
     })

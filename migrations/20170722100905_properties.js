@@ -13,6 +13,7 @@ exports.up = function(knex, Promise) {
     table.string("amenities").notNullable();
     table.float("nightly_price").notNullable();
     table.string("house_rules").notNullable();
+    table.boolean("bookedOnHalloween").notNullable();
   })
 };
 
