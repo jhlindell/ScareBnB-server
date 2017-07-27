@@ -39,8 +39,8 @@ exports.seed = function(knex, Promise) {
           state: 'CO',
           zip_code: 80301,
           photo_url: '/images/haunted-house-3.jpg',
-          description: 'This place overlooks boulder. The ghosts here pretend to be friendly but they will haunt you when you try to sleep. A perfect place to test if you really can sleep through anything.',
-          amenities: 'Wonderful Overlook, hottub, beanbags',
+          description: 'Think you can sleep through anything? How about Boulder hippie ghost drum circles?',
+          amenities: 'Wonderful Overlook, hottub, beanbags, patchouli',
           nightly_price: 45.99,
           house_rules: 'Bed time is 9-o-clock.',
           bookedOnHalloween: false
