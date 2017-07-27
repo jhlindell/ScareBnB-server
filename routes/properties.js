@@ -21,7 +21,7 @@ router.post('/', (req,res,next) => {
     .insert(property)
     .returning('*')
     .then(result=>{
-      res.send(result);
+      res.send(result[0]);
     })
     .catch(err => {
       next(err);

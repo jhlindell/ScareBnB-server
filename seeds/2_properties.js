@@ -38,7 +38,7 @@ exports.seed = function(knex, Promise) {
           city: 'Boulder',
           state: 'CO',
           zip_code: 80301,
-          photo_url: '/images/haunted-house-3.jpg',
+          photo_url: '/images/haunted-house-5.jpg',
           description: 'Think you can sleep through anything? How about Boulder hippie ghost drum circles?',
           amenities: 'Wonderful Overlook, hottub, beanbags, patchouli',
           nightly_price: 45.99,
